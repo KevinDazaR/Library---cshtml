@@ -30,12 +30,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Clientes/ModalCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcTW9kYWxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Clientes/ModalEdite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcTW9kYWxFZGl0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Dashboard/Index.cshtml]
@@ -58,16 +66,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Libros/Show.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXFNob3cuY3NodG1s
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Libros/ModalCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXE1vZGFsQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Libros/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXFVwZGF0ZS5jc2h0bWw=
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Libros/ModalEdite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXE1vZGFsRWRpdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Prestamos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Prestamos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Prestamos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Prestamos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Prestamos/ModalCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXE1vZGFsQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Prestamos/ModalEdite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXE1vZGFsRWRpdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dder5/OneDrive/Documentos/C\#/Biblioteca/Views/Shared/Error.cshtml]

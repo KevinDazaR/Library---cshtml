@@ -17,10 +17,7 @@ namespace Mvc.Controllers
         {
             return View();
         }
-        public IActionResult Show()
-        {
-            return View();
-        }
+
         public IActionResult Create()
         {
             return View();
@@ -28,7 +25,23 @@ namespace Mvc.Controllers
 
         public IActionResult Edit()
         {
-            
+
+            return View();
+        }
+
+        public IActionResult ModalCreate()
+        {
+
+            return View();
+        }
+        public IActionResult ModalEdite()
+        {
+
+            return View();
+        }
+        public IActionResult ModalDelete()
+        {
+
             return View();
         }
     }

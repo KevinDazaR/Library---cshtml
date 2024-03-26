@@ -85,8 +85,8 @@
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active" aria-current="page">
+                        <li>
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#home"></use>
                                 </svg>
@@ -94,23 +94,22 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Prestamos" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#speedometer2"></use>
                                 </svg>
                                 Préstamos
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Libros" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#table"></use>
                                 </svg>
                                 Libros
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
+                        <li  class="nav-item">
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link active text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#grid"></use>
                                 </svg>
@@ -118,7 +117,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#people-circle"></use>
                                 </svg>
@@ -126,7 +125,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#people-circle"></use>
                                 </svg>
@@ -134,7 +133,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#people-circle"></use>
                                 </svg>
@@ -167,13 +166,18 @@
                 <div class="container">
                     <h1 class="my-4">Lista de clientes</h1>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <input type="date" class="form-control" id="registration-date"
                                 placeholder="Fecha de registro">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <input type="text" class="form-control" id="document-number"
                                 placeholder="Número de documento">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-primary" id="search-client-btn">Buscar un cliente</button>
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -183,11 +187,7 @@
                                     cliente</button>
                             </a>
                         </div>
-                        <div class="col-md-6">
-                            <div class="d-flex justify-content-between">
-                                <button class="btn btn-primary" id="search-client-btn">Buscar un cliente</button>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="results mt-4"></div>
                 </div>
@@ -228,8 +228,10 @@
                                         <th>24/03/2024</th>
                                         <th>NINGUNA</th>
                                         <th>
-                                            <button type="button" class="btn btn-primary"
-                                                style="min-width: 100px;">Editar</button>
+                                            <a asp-area="" asp-controller="Clientes" asp-action="Edit">
+                                                <button type="button" class="btn btn-primary"
+                                                    style="min-width: 100px;">Editar</button>
+                                            </a>
                                             <button type="button" class="btn btn-danger" style="min-width: 100px; "
                                                 data-toggle="modal" data-target="#exampleModal">Eliminar</button>
                                         </th>
@@ -247,8 +249,10 @@
                                         <th>20/03/2024</th>
                                         <th>Reservado para viaje</th>
                                         <th>
-                                            <button type="button" class="btn btn-primary"
-                                                style="min-width: 100px;">Editar</button>
+                                            <a asp-area="" asp-controller="Clientes" asp-action="Edit">
+                                                <button type="button" class="btn btn-primary"
+                                                    style="min-width: 100px;">Editar</button>
+                                            </a>
                                             <button type="button" class="btn btn-danger" style="min-width: 100px; "
                                                 data-toggle="modal" data-target="#exampleModal">Eliminar</button>
                                         </th>
@@ -266,8 +270,10 @@
                                         <th>15/03/2024</th>
                                         <th>Favor regularizar situación</th>
                                         <th>
-                                            <button type="button" class="btn btn-primary"
-                                                style="min-width: 100px;">Editar</button>
+                                            <a asp-area="" asp-controller="Clientes" asp-action="Edit">
+                                                <button type="button" class="btn btn-primary"
+                                                    style="min-width: 100px;">Editar</button>
+                                            </a>
                                             <button type="button" class="btn btn-danger" style="min-width: 100px; "
                                                 data-toggle="modal" data-target="#exampleModal">Eliminar</button>
                                         </th>
@@ -285,8 +291,10 @@
                                         <th>18/03/2024</th>
                                         <th>---</th>
                                         <th>
-                                            <button type="button" class="btn btn-primary"
-                                                style="min-width: 100px;">Editar</button>
+                                            <a asp-area="" asp-controller="Clientes" asp-action="Edit">
+                                                <button type="button" class="btn btn-primary"
+                                                    style="min-width: 100px;">Editar</button>
+                                            </a>
                                             <button type="button" class="btn btn-danger" style="min-width: 100px; "
                                                 data-toggle="modal" data-target="#exampleModal">Eliminar</button>
                                         </th>
@@ -304,8 +312,10 @@
                                         <th>22/03/2024</th>
                                         <th>---</th>
                                         <th>
-                                            <button type="button" class="btn btn-primary"
-                                                style="min-width: 100px;">Editar</button>
+                                            <a asp-area="" asp-controller="Clientes" asp-action="Edit">
+                                                <button type="button" class="btn btn-primary"
+                                                    style="min-width: 100px;">Editar</button>
+                                            </a>
                                             <button type="button" class="btn btn-danger" style="min-width: 100px; "
                                                 data-toggle="modal" data-target="#exampleModal">Eliminar</button>
                                         </th>
@@ -323,8 +333,10 @@
                                         <th>17/03/2024</th>
                                         <th>---</th>
                                         <th>
-                                            <button type="button" class="btn btn-primary"
-                                                style="min-width: 100px;">Editar</button>
+                                            <a asp-area="" asp-controller="Clientes" asp-action="Edit">
+                                                <button type="button" class="btn btn-primary"
+                                                    style="min-width: 100px;">Editar</button>
+                                            </a>
                                             <button type="button" class="btn btn-danger" style="min-width: 100px; "
                                                 data-toggle="modal" data-target="#exampleModal">Eliminar</button>
                                         </th>
@@ -342,8 +354,10 @@
                                         <th>21/03/2024</th>
                                         <th>Pago pendiente</th>
                                         <th>
-                                            <button type="button" class="btn btn-primary"
-                                                style="min-width: 100px;">Editar</button>
+                                            <a asp-area="" asp-controller="Clientes" asp-action="Edit">
+                                                <button type="button" class="btn btn-primary"
+                                                    style="min-width: 100px;">Editar</button>
+                                            </a>
                                             <button type="button" class="btn btn-danger" style="min-width: 100px; "
                                                 data-toggle="modal" data-target="#exampleModal">Eliminar</button>
                                         </th>
@@ -361,8 +375,10 @@
                                         <th>16/03/2024</th>
                                         <th>---</th>
                                         <th>
-                                            <button type="button" class="btn btn-primary"
-                                                style="min-width: 100px;">Editar</button>
+                                            <a asp-area="" asp-controller="Clientes" asp-action="Edit">
+                                                <button type="button" class="btn btn-primary"
+                                                    style="min-width: 100px;">Editar</button>
+                                            </a>
                                             <button type="button" class="btn btn-danger" style="min-width: 100px; "
                                                 data-toggle="modal" data-target="#exampleModal">Eliminar</button>
                                         </th>

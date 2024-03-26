@@ -13,11 +13,11 @@ namespace Mvc.Controllers
             return View();
         }
 
-        public IActionResult Update()
+        public IActionResult Edit()
         {
             return View();
         }
-        public IActionResult Show()
+        public IActionResult ModalEdite()
         {
             return View();
         }

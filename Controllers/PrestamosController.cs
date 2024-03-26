@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Mvc.Controllers
 {
-    public class PrestamosController: Controller
+    public class PrestamosController : Controller
     {
         public IActionResult Index()
         {
@@ -23,6 +23,26 @@ namespace Mvc.Controllers
         }
         public IActionResult Create()
         {
+            return View();
+        }
+        public IActionResult ModalCreate()
+        {
+
+            return View();
+        }
+        public IActionResult ModalEdite()
+        {
+
+            return View();
+        }
+        public IActionResult ModalDelete()
+        {
+
+            return View();
+        }
+        public IActionResult Edit()
+        {
+
             return View();
         }
     }

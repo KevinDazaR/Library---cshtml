@@ -1,15 +1,10 @@
 <div class="container">
-    <h1>Aquí podrás agregar un libro</h1>
+    <h1>Aquí podrás agregar un préstamo</h1>
 
     <form>
         <div class="form-group">
             <label for="name">Titulo del libro:</label>
             <input type="text" id="name" class="form-control" name="name" placeholder="Ejm: 100 años de soledad">
-        </div>
-
-        <div class="form-group">
-            <label for="count">Autor:</label>
-            <input type="number" id="count" class="form-control" name="count" placeholder="Ejm: ">
         </div>
 
         <div class="form-group">
@@ -24,17 +19,28 @@
         </div>
 
         <div class="form-group">
-            <label for="count">Género:</label>
-            <input type="number" id="count" class="form-control" name="count" placeholder="Ejm: Acciòn, Ciencia Ficciòn, etc ">
+            <label for="count">Prestado A:</label>
+            <input type="number" id="count" class="form-control" name="count" placeholder="Ejm: 1003213 ">
+            <p>Ingrese el nùmero de documento del usuario a quien se le prestará el libro</p>
         </div>
 
         <div class="form-group">
-            <label for="count">Editorial:</label>
-            <input type="number" id="count" class="form-control" name="count" placeholder="Ejm: Suramericana ">
+            <label for="count">Prestador:</label>
+            <input type="text" id="count" class="form-control" name="count" value="José Armando Casas" disabled>
         </div>
 
         <div class="form-group">
-            <label for="count">Fecha Ingreso:</label>
+            <label for="count">Correo:</label>
+            <input type="text" id="count" class="form-control" name="count" value="José Armando Casas" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Fecha ingreso:</label>
+            <input type="text" id="count" class="form-control" name="count" value="José Armando Casas" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Última modificaciòn</label>
             <input
                 type="datetime-local"
                 value="2024-03-24T19:30"
@@ -46,10 +52,10 @@
         <div class="form-group">
             <label for="count">Estado:</label>
             <select name="select">
-                <option value="value1" selected>Nuevo</option>
-                <option value="value2">Como nuevo</option>
-                <option value="value3">Desgastado</option>
-                <option value="value3">Dañado</option>
+                <option value="value1" selected>EN PRÈSTAMO</option>
+                <option value="value2">DEVUELTO</option>
+                <option value="value3">EN MORA</option>
+                <option value="value3">EN ESTUDIO</option>
             </select>
         </div>
 
@@ -58,9 +64,9 @@
             <textarea rows="4" cols="50" style="max-width: 200px; max-height: 100px; resize: both; overflow: auto;"></textarea>
 
         </div>
-        <a asp-area="" asp-controller="Libros" asp-action="ModalCreate">
+        <a asp-area="" asp-controller="Prestamos" asp-action="ModalCreate">
             <button type="button" class="btn btn-primary" style="min-width: 100px;"
-            data-toggle="modal" data-target="#exampleModalCreate">Agregar</button>
+            >Crear préstamo</button>
         </a>
     </form>
 </div>

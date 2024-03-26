@@ -1,0 +1,72 @@
+<div class="container">
+    <h1>Editar un préstamo</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="name">Titulo del libro:</label>
+            <input type="text" id="name" class="form-control" name="name" value="100 años de soledad">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Cantidad:</label>
+            <input type="number" id="price" class="form-control" name="price" value="2">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Referencia:</label>
+            <input type="text" id="price" class="form-control" name="price" value="12sad3">
+            <p><b>NOTA:</b>La referencia debe de ser el còdigo ùnico de cada libro al final de la pasta o portada</p>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Prestador:</label>
+            <input type="text" id="count" class="form-control" name="count" value="José Armando Casas" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Prestado A:</label>
+            <input type="text" id="count" class="form-control" name="count" value="100311213 ">
+            <p>Ingrese el nùmero de documento del usuario a quien se le prestará el libro</p>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Estado:</label>
+            <select name="select">
+                <option value="value1" selected>Nuevo</option>
+                <option value="value2">Como nuevo</option>
+                <option value="value3">Desgastado</option>
+                <option value="value3">Dañado</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Correo:</label>
+            <input type="email" id="count" class="form-control" name="count" value="Jdaram12@gmail.com">
+        </div>
+
+        <div class="form-group">
+            <label for="count">Fecha desde:</label>
+            <input type="date" id="count" class="form-control" name="count" value="24/03/2024">
+        </div>
+
+        <div class="form-group">
+            <label for="count">Fecha hasta</label>
+            <input
+                type="datetime-local"
+                value="2024-03-24T19:30"
+                min="2018-06-07T00:00"
+                max="2018-06-14T00:00" disabled/>
+            @* <input type="date" disabled id="count" class="form-control" name="count" placeholder="23/03/2024"> *@
+        </div>
+
+        <div class="form-group">
+            <label for="count">Observaciòn:</label>
+            <textarea rows="4" cols="50" style="max-width: 200px; max-height: 100px; resize: both; overflow: auto;"></textarea>
+
+        </div>
+        <a asp-area="" asp-controller="Prestamos" asp-action="ModalCreate">
+            <button type="button" class="btn btn-primary" style="min-width: 100px;"
+            data-toggle="modal" data-target="#exampleModalCreatePrestamo">Editar préstamo</button>
+        </a>
+    </form>
+</div>

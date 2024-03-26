@@ -10,11 +10,140 @@
         </button>
       </div>
       <div class="modal-body">
-        ¿Estás seguro de eliminar al cliente?
+        ¿Estás seguro de eliminar este registro?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
         <form asp-area="" asp-controller="Clientes" asp-action="Delete">
+          <button type="submit" class="btn btn-primary">Si</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de editar este registro?
+      </div>
+      <div class="modal-footer">
+        <form asp-area="" asp-controller="Libros" asp-action="Index">
+          <button type="submit" class="btn btn-primary">No</button>
+        </form>
+        <form asp-area="" asp-controller="Libros" asp-action="ModalEdite">
+          <button type="submit" class="btn btn-primary">Si</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de agregar este registro?
+      </div>
+      <div class="modal-footer">
+      <form asp-area="" asp-controller="Libros" asp-action="Index">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        </form>
+        <form asp-area="" asp-controller="Libros" asp-action="ModalCreate">
+          <button type="submit" class="btn btn-primary">Si</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal PRESTAMO CREATE-->
+<div class="modal fade" id="exampleModalCreatePrestamo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de agregar este registro?
+      </div>
+      <div class="modal-footer">
+      <form asp-area="" asp-controller="Prestamo" asp-action="Index">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        </form>
+        <form asp-area="" asp-controller="Prestamo" asp-action="ModalCreate">
+          <button type="submit" class="btn btn-primary">Si</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal  PRESTAMO EDITE-->
+<div class="modal fade" id="exampleModalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de editar este registro?
+      </div>
+      <div class="modal-footer">
+        <form asp-area="" asp-controller="Prestamo" asp-action="Index">
+          <button type="submit" class="btn btn-primary">No</button>
+        </form>
+        <form asp-area="" asp-controller="Edite" asp-action="ModalEdite">
+          <button type="submit" class="btn btn-primary">Si</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal PRESTAMO ELIMINAR-->
+<div class="modal fade" id="exampleModalEliminarPrestamo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de eliminar este registro?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <form asp-area="" asp-controller="Prestamos" asp-action="Delete">
           <button type="submit" class="btn btn-primary">Si</button>
         </form>
       </div>

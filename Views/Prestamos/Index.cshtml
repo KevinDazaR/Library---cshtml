@@ -1,3 +1,14 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+@await Html.PartialAsync("_Modal")
+
 <header>
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <!-- Container wrapper -->
@@ -31,15 +42,6 @@
                         <span class="badge rounded-pill badge-notification bg-danger">1</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="#">Some news</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Another news</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </li>
                     </ul>
                 </li>
 
@@ -52,13 +54,13 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                         <li>
-                            <a class="dropdown-item" href="#">My profile</a>
+                            <a class="dropdown-item" href="#">Mi perfil</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Configuraciones</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">Logout</a>
+                            <a class="dropdown-item" href="#">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </li>
@@ -69,9 +71,9 @@
     <!-- Navbar -->
 </header>
 
-<div class="col-md-12">
-    <div class="boxes-container">
-        <div class="row">
+<div class="col-md-10">
+  <div class="boxes-container">
+    <div class="row">
             <div class="col-md-3">
                 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark vh-100">
                     <a href="/"
@@ -83,24 +85,23 @@
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active" aria-current="page">
+                        <li>
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#home"></use>
                                 </svg>
                                 Inicio
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
+                        <li  class="nav-item">
+                            <a asp-area="" asp-controller="Prestamos" asp-action="Index" class="nav-link active text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#speedometer2"></use>
                                 </svg>
                                 Préstamos
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Libros" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#table"></use>
                                 </svg>
@@ -108,7 +109,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#grid"></use>
                                 </svg>
@@ -116,7 +117,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#people-circle"></use>
                                 </svg>
@@ -124,7 +125,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#people-circle"></use>
                                 </svg>
@@ -132,7 +133,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
+                            <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="nav-link text-white">
                                 <svg class="bi me-2" width="16" height="16">
                                     <use xlink:href="#people-circle"></use>
                                 </svg>
@@ -160,183 +161,163 @@
                     </div>
                 </div>
             </div>
-            @*Fin sidebar*@
-
-                  <div class="col-md-9"></div>
-            <div>
-                <h1 class="text-center my-5 mx-5">Bienvenido a Pŕestamos</h1>
-            </div>
-
-            <div class="col-md-12 d-flex justify-content-center gap-5">
-
-                <a asp-area="" asp-controller="Clientes" asp-action="Create">
-                    <button type="button" class="btn btn-primary btn-lg my-5">Agregar un nuevo préstamo</button>
-                </a>
-            </div>
-
-            <!-- Kevin -->
-            <h3>Últimos préstamos agregados</h3>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <table class="table table-striped table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Titulo Libro</th>
-                                    <th>Cantidad</th>
-                                    <th>Referencias</th>
-                                    <th>Prestado A</th>
-                                    <th>Prestador</th>
-                                    <th>Estado</th>
-                                    <th>Correo</th>
-                                    <th>Estado</th>
-                                    <th>Fecha Ingreso</th>
-                                    <th>Última Modificación</th>
-                                    <th>Observación</th>
-                                    <th>Acción</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>0012</th>
-                                    <th>CC</th>
-                                    <th>100003915</th>
-                                    <th>Dkreier Radariz</th>
-                                    <th>KR 32 # 43-21</th>
-                                    <th>315965848</th>
-                                    <th>dkrier@gmail.com</th>
-                                    <th>EN PRESTAMO</th>
-                                    <th>23/03/2023</th>
-                                    <th>24/03/2024</th>
-                                    <th>NINGUNA</th>
-                                    <th>
-                                        <button type="button" class="btn btn-primary">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>0013</th>
-                                    <th>Pasaporte</th>
-                                    <th>200456789</th>
-                                    <th>Andrés López</th>
-                                    <th>Calle 45 # 67-89</th>
-                                    <th>300987654</th>
-                                    <th>alopez@hotmail.com</th>
-                                    <th>DISPONIBLE</th>
-                                    <th>12/05/2023</th>
-                                    <th>20/03/2024</th>
-                                    <th>Reservado para viaje</th>
-                                    <th>
-                                        <button type="button" class="btn btn-primary">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>0014</th>
-                                    <th>CC</th>
-                                    <th>500908765</th>
-                                    <th>Maria González</th>
-                                    <th>Av. Principal # 123</th>
-                                    <th>310876543</th>
-                                    <th>mgonzalez@gmail.com</th>
-                                    <th>EN MORA</th>
-                                    <th>30/07/2023</th>
-                                    <th>15/03/2024</th>
-                                    <th>Favor regularizar situación</th>
-                                    <th>
-                                        <button type="button" class="btn btn-primary">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>0015</th>
-                                    <th>Cédula de Extranjería</th>
-                                    <th>700123456</th>
-                                    <th>Luisa Martínez</th>
-                                    <th>Cra. 15 # 34-56</th>
-                                    <th>320654321</th>
-                                    <th>lmartinez@yahoo.com</th>
-                                    <th>DISPONIBLE</th>
-                                    <th>05/10/2023</th>
-                                    <th>18/03/2024</th>
-                                    <th>---</th>
-                                    <th>
-                                        <button type="button" class="btn btn-primary">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>0016</th>
-                                    <th>Pasaporte</th>
-                                    <th>300567890</th>
-                                    <th>David Pérez</th>
-                                    <th>Calle 20 # 56-78</th>
-                                    <th>335678901</th>
-                                    <th>dperez@gmail.com</th>
-                                    <th>EN PRESTAMO</th>
-                                    <th>18/02/2023</th>
-                                    <th>22/03/2024</th>
-                                    <th>---</th>
-                                    <th>
-                                        <button type="button" class="btn btn-primary">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>0017</th>
-                                    <th>CC</th>
-                                    <th>400654321</th>
-                                    <th>Paola Sánchez</th>
-                                    <th>Calle 25 # 78-90</th>
-                                    <th>310098765</th>
-                                    <th>psanchez@gmail.com</th>
-                                    <th>DISPONIBLE</th>
-                                    <th>10/03/2023</th>
-                                    <th>17/03/2024</th>
-                                    <th>---</th>
-                                    <th>
-                                        <button type="button" class="btn btn-primary">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>0018</th>
-                                    <th>Cédula de Extranjería</th>
-                                    <th>600234567</th>
-                                    <th>María Rodríguez</th>
-                                    <th>Av. Libertadores # 12-34</th>
-                                    <th>315678902</th>
-                                    <th>mrodriguez@hotmail.com</th>
-                                    <th>EN MORA</th>
-                                    <th>15/06/2023</th>
-                                    <th>21/03/2024</th>
-                                    <th>Pago pendiente</th>
-                                    <th>
-                                        <button type="button" class="btn btn-primary">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>0019</th>
-                                    <th>Pasaporte</th>
-                                    <th>900345678</th>
-                                    <th>Carlos Gómez</th>
-                                    <th>Diagonal 10 # 45-67</th>
-                                    <th>300123456</th>
-                                    <th>cgomez@yahoo.com</th>
-                                    <th>EN PRESTAMO</th>
-                                    <th>07/09/2023</th>
-                                    <th>16/03/2024</th>
-                                    <th>---</th>
-                                    <th>
-                                        <button type="button" class="btn btn-primary">Editar</button>
-                                        <button type="button" class="btn btn-danger">Eliminar</button>
-                                    </th>
-                                </tr>
-                            </tbody>
-                        </table>
+@*Fin sidebar*@
+      <div class="col-md-9">
+        <div class="container">
+            <h1 class="my-4">Aquí podrás gestionar los préstamos</h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="date" class="form-control" id="registration-date"
+                        placeholder="Fecha de registro">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="document-number"
+                        placeholder="Titulo del libro">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="document-number"
+                        placeholder="#Documento cliente">
+                </div>
+                <div class="col-md-3">
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary" id="search-client-btn">Buscar</button>
                     </div>
                 </div>
             </div>
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <a asp-area="" asp-controller="Prestamos" asp-action="Create">
+                        <button class="btn btn-success btn-block" id="add-client-btn">Agregar un nuevo
+                            préstamo</button>
+                    </a>
+                </div>
+
+            </div>
+            <div class="results mt-4"></div>
+        </div>
+
+          
+          <div class="container">
+            <h3 class="my-5">Últimos préstamos</h3>
+            <div class="row">
+              <div class="col">
+        	    <table class="table table-striped table-bordered table-hover">
+					<thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Titulo Libro</th>
+                            <th>Cantidad</th>
+                            <th>Referencia/s</th>
+                            <th>Prestador</th>
+                            <th>Prestado A</th>
+                            <th>Correo</th>
+                            <th>Estado Prestamo</th>
+                            <th>Fecha Desde</th>
+                            <th>Fecha Hasta</th>
+                            <th>Observación</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>001</th>
+                            <th>El amor en los tiempos del cólera</th>
+                            <th>2</th>
+                            <th>AB123</th>
+                            <th>María González</th>
+                            <th>Luis Pérez</th>
+                            <th>luis.perez@example.com</th>
+                            <th>EN PRESTAMO</th>
+                            <th>2024-03-15</th>
+                            <th>2024-03-29</th>
+                            <th>-</th>
+                            <th>
+                                
+                                <a asp-area="" asp-controller="Prestamos" asp-action="Edit">
+                                    <button type="button" class="btn btn-primary"
+                                    style="min-width: 100px;">Editar</button>
+                                </a>
+                                
+                                <button type="button" class="btn btn-danger" style="min-width: 100px; "
+                                data-toggle="modal" data-target="#exampleModalEliminarPrestamo">Eliminar</button>
+                                
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>002</th>
+                            <th>Cien años de soledad</th>
+                            <th>1</th>
+                            <th>CD456</th>
+                            <th>Carlos Rodríguez</th>
+                            <th>Ana Martínez</th>
+                            <th>ana.martinez@example.com</th>
+                            <th>DEVUELTO</th>
+                            <th>2024-03-18</th>
+                            <th>2024-03-25</th>
+                            <th>-</th>
+                            <th>
+                                 <a asp-area="" asp-controller="Prestamos" asp-action="Edit">
+                                    <button type="button" class="btn btn-primary"
+                                    style="min-width: 100px;">Editar</button>
+                                </a>
+                                <button type="button" class="btn btn-danger" style="min-width: 100px; "
+                                data-toggle="modal" data-target="#exampleModalEliminarPrestamo">Eliminar</button>
+                            </th>
+                        </tr>
+                        
+                         <tr>
+                            <th>011</th>
+                            <th>La sombra del viento</th>
+                            <th>3</th>
+                            <th>EF789</th>
+                            <th>Andrés López</th>
+                            <th>Marta García</th>
+                            <th>marta.garcia@example.com</th>
+                            <th>EN PRESTAMO</th>
+                            <th>2024-03-20</th>
+                            <th>2024-04-10</th>
+                            <th>-</th>
+                            <th>
+                                 <a asp-area="" asp-controller="Prestamos" asp-action="Edite">
+                                    <button type="button" class="btn btn-primary"
+                                    style="min-width: 100px;">Editar</button>
+                                </a>
+                                <button type="button" class="btn btn-danger" style="min-width: 100px; "
+                                data-toggle="modal" data-target="#exampleModalEliminarPrestamo">Eliminar</button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>012</th>
+                            <th>Rayuela</th>
+                            <th>1</th>
+                            <th>GH234</th>
+                            <th>Juan Pérez</th>
+                            <th>David Gómez</th>
+                            <th>david.gomez@example.com</th>
+                            <th>EN PRESTAMO</th>
+                            <th>2024-03-22</th>
+                            <th>2024-04-05</th>
+                            <th>-</th>
+                            <th>
+                                 <a asp-area="" asp-controller="Prestamos" asp-action="Edit">
+                                    <button type="button" class="btn btn-primary"
+                                    style="min-width: 100px;">Editar</button>
+                                </a>
+                                <button type="button" class="btn btn-danger" style="min-width: 100px; "
+                                data-toggle="modal" data-target="#exampleModalEliminarPrestamo">Eliminar</button>
+                            </th>
+                        </tr>
+                                        
+                    </tbody>
+
+				</table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
