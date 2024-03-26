@@ -25,6 +25,10 @@ namespace Mvc.Controllers
         {
             return View();
         }
+        public IActionResult ModalCreate()
+        {
+            return View();
+        }
     }
 
 }
