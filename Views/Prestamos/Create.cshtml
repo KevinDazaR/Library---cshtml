@@ -1,0 +1,71 @@
+<div class="container">
+    <h1>Aquì podràs agregar un prèstamo</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="name">Titulo del libro:</label>
+            <input type="text" id="name" class="form-control" name="name" placeholder="Ejm: 100 años de soledad">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Cantidad:</label>
+            <input type="number" id="price" class="form-control" name="price" placeholder="Ejm: 2">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Referencia:</label>
+            <input type="number" id="price" class="form-control" name="price" placeholder="Ejm: 12sad3">
+            <p><b>NOTA:</b>La referencia debe de ser el còdigo ùnicode cada libro al final de la pasta o portada</p>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Prestado A:</label>
+            <input type="number" id="count" class="form-control" name="count" placeholder="Ejm: 1003213 ">
+            <p>Ingrese el nùmero de documento del usuario a quien se le prestarà el libro</p>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Prestador:</label>
+            <input type="text" id="count" class="form-control" name="count" value="Josè Armando Casas" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Correo:</label>
+            <input type="text" id="count" class="form-control" name="count" value="Josè Armando Casas" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Fecha ingreso:</label>
+            <input type="text" id="count" class="form-control" name="count" value="Josè Armando Casas" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="count">ûltima modificaciòn</label>
+            <input
+                type="datetime-local"
+                value="2024-03-24T19:30"
+                min="2018-06-07T00:00"
+                max="2018-06-14T00:00" disabled/>
+            @* <input type="date" disabled id="count" class="form-control" name="count" placeholder="23/03/2024"> *@
+        </div>
+
+        <div class="form-group">
+            <label for="count">Estado:</label>
+            <select name="select">
+                <option value="value1" selected>Nuevo</option>
+                <option value="value2">Como nuevo</option>
+                <option value="value3">Desgastado</option>
+                <option value="value3">Dañado</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="count">Observaciòn:</label>
+            <textarea rows="4" cols="50" style="max-width: 200px; max-height: 100px; resize: both; overflow: auto;"></textarea>
+
+        </div>
+        <a asp-area="" asp-controller="Libros" asp-action="Index">
+            <button class="btn btn-primary my-5">Agregar</button>
+        </a>
+    </form>
+</div>

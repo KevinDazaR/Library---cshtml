@@ -7,8 +7,13 @@ a.navbar-brand[b-tgi9xj0eup] {
   word-break: break-all;
 }
 
+*[b-tgi9xj0eup]{
+  text-decoration: none !important;
+}
+
 a[b-tgi9xj0eup] {
-  color: #0077cc;
+  color: white !important;
+  text-decoration: none !important;
 }
 
 .btn-primary[b-tgi9xj0eup] {

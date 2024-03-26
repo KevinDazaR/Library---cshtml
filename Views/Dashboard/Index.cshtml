@@ -78,7 +78,10 @@
             <svg class="bi me-2" width="40" height="32">
               <use xlink:href="#bootstrap"></use>
             </svg>
-            <span class="fs-4">Sidebar</span>
+            <span class="fs-4">
+              <i class="fa-solid fa-bars">
+              </i>
+            </span>
           </a>
           <hr>
           <ul class="nav nav-pills flex-column mb-auto">
@@ -87,7 +90,9 @@
                 <svg class="bi me-2" width="16" height="16">
                   <use xlink:href="#home"></use>
                 </svg>
-                Inicio
+                   <a asp-area="" asp-controller="Dashboard" asp-action="Index">
+                    Inicio
+                  </a>
               </a>
             </li>
             <li>
@@ -95,7 +100,9 @@
                 <svg class="bi me-2" width="16" height="16">
                   <use xlink:href="#speedometer2"></use>
                 </svg>
-                Préstamos
+                  <a asp-area="" asp-controller="Prestamos" asp-action="Index">
+                    Préstamos
+                  </a>
               </a>
             </li>
             <li>
@@ -103,7 +110,9 @@
                 <svg class="bi me-2" width="16" height="16">
                   <use xlink:href="#table"></use>
                 </svg>
-                Libros
+                <a asp-area="" asp-controller="Libros" asp-action="Index" style="text-decoration: none;">
+                    Libros
+                  </a>
               </a>
             </li>
             <li>
@@ -111,7 +120,9 @@
                 <svg class="bi me-2" width="16" height="16">
                   <use xlink:href="#grid"></use>
                 </svg>
-                Clientes
+                <a asp-area="" asp-controller="Clientes" asp-action="Index">
+                    Clientes
+                  </a>
               </a>
             </li>
             <li>
@@ -119,7 +130,9 @@
                 <svg class="bi me-2" width="16" height="16">
                   <use xlink:href="#people-circle"></use>
                 </svg>
-                Categorías
+                <a asp-area="" asp-controller="Dashboard" asp-action="Index">
+                    Categorìas
+                  </a>
               </a>
             </li>
             <li>
@@ -127,7 +140,9 @@
                 <svg class="bi me-2" width="16" height="16">
                   <use xlink:href="#people-circle"></use>
                 </svg>
-                Autores
+                <a asp-area="" asp-controller="Dashboard" asp-action="Index">
+                    Autores
+                  </a>
               </a>
             </li>
             <li>
@@ -135,7 +150,9 @@
                 <svg class="bi me-2" width="16" height="16">
                   <use xlink:href="#people-circle"></use>
                 </svg>
-                Editoriales
+                <a asp-area="" asp-controller="Prestamos" asp-action="Index">
+                    Editoriales
+                  </a>
               </a>
             </li>
           </ul>
